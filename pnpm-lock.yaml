@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@ant-design/icons':
+        specifier: ^6.1.0
+        version: 6.1.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      ant-design:
+        specifier: ^1.0.0
+        version: 1.0.0
       antd:
         specifier: ^6.1.0
         version: 6.1.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1011,6 +1017,9 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ant-design@1.0.0:
+    resolution: {integrity: sha512-EiN9oXroImi01yz1xwpDzExb1U5ddi4MYiCTaTLVl8SA3QHXYClJn0BikAYS2IMPzmpmAYhwOgGA2HE/sL/c9g==}
 
   antd@6.1.0:
     resolution: {integrity: sha512-RIe4W5saaL9SWgvqCcvz6LZta/KwT50B0YF7xYiWVZh0Gqfw2rJAsOMcp202Hxgm+YiyoSp4QqqvexKhuGGarw==}
@@ -2653,6 +2662,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ant-design@1.0.0: {}
 
   antd@6.1.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
