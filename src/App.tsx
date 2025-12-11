@@ -1,7 +1,5 @@
-import React from 'react';
 import { MainLayout } from './layouts/MainLayout';
-import { DocumentList } from './views/DocumentList';
-import { AIChatPanel } from './components/AIChatPanel';
+import { FileManager } from './views/FileManager';
 import { useAppStore } from './store/useAppStore';
 
 function App() {
@@ -10,17 +8,17 @@ function App() {
   const renderContent = () => {
     switch (currentView) {
       case 'documents':
-        return <DocumentList />;
+        return <FileManager />;
       case 'chat_history':
         return <div>Chat History View (Placeholder)</div>;
       default:
-        // Default fall back to DocumentList or show placeholder
-        return <DocumentList />;
+        // Default fall back to FileManager
+        return <FileManager />;
     }
   };
 
   return (
-    <MainLayout RightPanel={<AIChatPanel />}>
+    <MainLayout>
        {renderContent()}
     </MainLayout>
   );
