@@ -28,7 +28,6 @@ export const appTheme: ThemeConfig = {
     },
     Button: {
       primaryShadow: 'none',
-      textShadow: 'none',
       fontWeight: 500,
       contentFontSize: 14,
     },
@@ -51,5 +50,5 @@ export const appTheme: ThemeConfig = {
       titleHeight: 28,
     },
   },
-  cssVar: true, // Enable CSS Variables for Less usage
+  //  cssVar: { key: 'app' },
 };
