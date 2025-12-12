@@ -1,27 +1,20 @@
-import { MainLayout } from './layouts/MainLayout';
-import { FileManager } from './views/FileManager';
-import { useAppStore } from './store/useAppStore';
+import React from 'react';
+import { ConfigProvider } from 'antd';
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
+import zhCN from 'antd/locale/zh_CN';
 
-function App() {
-  const { currentView } = useAppStore();
+import appTheme from './theme';
 
-  const renderContent = () => {
-    switch (currentView) {
-      case 'documents':
-        return <FileManager />;
-      case 'chat_history':
-        return <div>Chat History View (Placeholder)</div>;
-      default:
-        // Default fall back to FileManager
-        return <FileManager />;
-    }
-  };
-
+const App: React.FC = () => {
   return (
-    <MainLayout>
-       {renderContent()}
-    </MainLayout>
+    <ConfigProvider
+      locale={zhCN}
+      theme={appTheme} // 2. 在这里直接传入对象
+    >
+      <RouterProvider router={router} />
+    </ConfigProvider>
   );
-}
+};
 
-export default App;
+export default App
